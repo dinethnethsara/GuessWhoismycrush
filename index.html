@@ -7,165 +7,272 @@
     <meta name="author" content="dinethnethsara">
     <title>Chamalsha | Personal Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+v<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="last-modified" content="2025-05-18 10:45:25 UTC">
+    <meta name="author" content="dinethnethsara">
+    <title>Chamalsha | Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Import Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
         
-        /* All your existing CSS here */
+        /* Base Styles */
+        :root {
+            --primary: #ff6b9d;
+            --secondary: #4a6fff;
+            --dark: #151525;
+            --light: #f8f9fc;
+            --accent: #9966ff;
+            --accent2: #ff9d66;
+            --gradient1: linear-gradient(135deg, #ff6b9d, #ff9d66);
+            --gradient2: linear-gradient(135deg, #4a6fff, #9966ff);
+            --gradient3: linear-gradient(135deg, #ff6b9d, #9966ff);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Your original styles here */
         [Previous CSS content from your file]
 
-        /* Additional styles */
-        /* Enhanced Container Backdrop */
+        /* Enhanced styles */
         .container {
             backdrop-filter: blur(10px) saturate(180%) contrast(90%);
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .container:hover {
-            transform: translateY(-5px) scale(1.005);
+        /* Additional enhanced styles */
+        [Enhanced styles from previous response]
+
+        /* Loading Animation Enhancement */
+        .loading-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
         }
 
-        /* Add all the additional CSS styles from the previous response */
-        [Additional CSS content from previous response]
+        .loading-animation {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+
+        .loading-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-circle:nth-child(2) {
+            border-top-color: var(--secondary);
+            animation-delay: 0.2s;
+            scale: 0.8;
+        }
+
+        .loading-circle:nth-child(3) {
+            border-top-color: var(--accent);
+            animation-delay: 0.4s;
+            scale: 0.6;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Timestamp styling */
+        .timestamp {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 10px;
+            text-align: center;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* Credits styling */
+        .credits {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: right;
+        }
+
+        .credits a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .credits a:hover {
+            color: var(--accent);
+        }
     </style>
 </head>
 <body>
-    <!-- Star Background Animation -->
+    <!-- Loading Screen -->
+    <div class="loading-container" id="loadingScreen">
+        <div class="loading-animation">
+            <div class="loading-circle"></div>
+            <div class="loading-circle"></div>
+            <div class="loading-circle"></div>
+        </div>
+    </div>
+
+    <!-- Star Background -->
     <div class="stars" id="stars"></div>
     
+    <!-- Main Content -->
     <div class="container">
         <div class="inner-container">
-            <div class="top-bar"></div>
-            <div class="content">
-                <!-- Decorative Elements -->
-                <div class="decoration"></div>
-                <div class="decoration"></div>
-                
-                <h1>Chamalsha</h1>
-                <div class="tagline">Passionate • Forward-thinking • Creative</div>
-                
-                <div class="profile-text">
-                    <p>Hello and welcome! I'm <span class="highlight">Chamalsha</span> — a passionate, forward-thinking individual with a creative spirit and a strong vision for the future. I believe in turning ideas into reality through innovation, dedication, and authenticity.</p>
-                    
-                    <p>With a deep interest in technology, digital design, and personal growth, I strive to bring excellence into everything I do — whether it's exploring new tools, learning new skills, or inspiring others to follow their dreams.</p>
-                    
-                    <div class="quote">
-                        <p>I don't just aim to participate in the future; I aim to shape it.</p>
-                    </div>
-                    
-                    <p>What sets me apart is my unique blend of logical thinking and creative flair. I'm someone who's just as comfortable solving complex challenges as I am crafting beautiful experiences — always pushing the boundaries of what's possible.</p>
-                    
-                    <p>My journey is not just about achievements; it's about <span class="highlight">impact</span>. It's about bringing positivity into every space I enter, creating value through empathy, and constantly evolving into the best version of myself.</p>
+            [Your original HTML content]
+            
+            <!-- Updated footer with timestamp -->
+            <div class="footer">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
-                
-                <div class="traits">
-                    <div class="trait-item">
-                        <span class="trait-icon"><i class="fas fa-brain"></i></span>
-                        <span>Smart</span>
-                    </div>
-                    <div class="trait-item">
-                        <span class="trait-icon"><i class="fas fa-paint-brush"></i></span>
-                        <span>Creative</span>
-                    </div>
-                    <div class="trait-item">
-                        <span class="trait-icon"><i class="fas fa-rocket"></i></span>
-                        <span>Driven</span>
-                    </div>
+                <div class="signature">
+                    Made with <span class="heart">💙</span> by Dineth
                 </div>
-                
-                <p class="lead-text">That's me — <strong>Chamalsha</strong>, the girl who doesn't just dream, she leads.</p>
-                
-                <div class="crush-badge">
-                    <p class="crush-text">And yes... I'm proud to be <span class="crush-highlight">Dineth Nethsara's official crush</span> — the one he always talks about with heart and respect. Because greatness recognizes greatness.</p>
-                </div>
-                
-                <div class="hashtags">
-                    <div class="hashtag">#QueenEnergy</div>
-                    <div class="hashtag hashtag-special">#DinethsCrush</div>
-                    <div class="hashtag">#GirlsWhoLead</div>
-                    <div class="hashtag">#Chamalsha</div>
-                </div>
-                
-                <div class="footer">
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    </div>
-                    <div class="signature">
-                        Made with <span class="heart">💙</span> by Dineth
-                    </div>
-                    <div class="last-updated">
-                        Last updated: 2025-05-18 10:42:52 UTC
-                    </div>
+                <div class="timestamp">
+                    Last updated: 2025-05-18 10:45:25 UTC
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Credits -->
+    <div class="credits">
+        Created by: <a href="https://github.com/dinethnethsara" target="_blank">@dinethnethsara</a>
+    </div>
+
     <script>
-        // Custom Cursor and Animations
+        // Loading Screen Handler
         document.addEventListener('DOMContentLoaded', () => {
-            // Create star background
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 2000);
+        });
+
+        // Star Background Generator
+        const createStarBackground = () => {
             const starsContainer = document.getElementById('stars');
-            for (let i = 0; i < 200; i++) {
+            const starCount = 200;
+
+            for (let i = 0; i < starCount; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
+                
+                // Random star properties
                 star.style.width = `${Math.random() * 3}px`;
                 star.style.height = star.style.width;
                 star.style.left = `${Math.random() * 100}%`;
                 star.style.top = `${Math.random() * 100}%`;
-                star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                star.style.animationDuration = `${2 + Math.random() * 3}s`;
                 star.style.animationDelay = `${Math.random() * 3}s`;
+                
                 starsContainer.appendChild(star);
             }
+        };
 
-            // Custom Cursor
+        // Initialize Features
+        document.addEventListener('DOMContentLoaded', () => {
+            createStarBackground();
+            
+            // Add wave effect to heading
+            const heading = document.querySelector('h1');
+            if (heading) {
+                heading.className = 'wave-text';
+                heading.innerHTML = heading.textContent
+                    .split('')
+                    .map((char, i) => `<span style="--char-index: ${i}">${char}</span>`)
+                    .join('');
+            }
+
+            // Initialize profile text animations
+            document.querySelectorAll('.profile-text p').forEach((p, i) => {
+                p.style.setProperty('--index', i);
+            });
+
+            // Add smooth scroll behavior
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href'))
+                        .scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                });
+            });
+        });
+
+        // Custom cursor effect
+        (() => {
             const cursor = document.createElement('div');
             const follower = document.createElement('div');
+            
             cursor.className = 'cursor';
             follower.className = 'cursor-follower';
+            
             document.body.appendChild(cursor);
             document.body.appendChild(follower);
 
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let followerX = 0, followerY = 0;
+
             document.addEventListener('mousemove', (e) => {
-                cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
-                follower.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+                mouseX = e.clientX;
+                mouseY = e.clientY;
             });
 
-            // Particles
-            const particlesContainer = document.createElement('div');
-            particlesContainer.className = 'particles';
-            document.body.appendChild(particlesContainer);
+            const animate = () => {
+                // Smooth cursor movement
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                followerX += (mouseX - followerX) * 0.05;
+                followerY += (mouseY - followerY) * 0.05;
 
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = `${Math.random() * 100}vw`;
-                particle.style.animationDelay = `${Math.random() * 20}s`;
-                particlesContainer.appendChild(particle);
-            }
+                cursor.style.transform = `translate(${cursorX - 10}px, ${cursorY - 10}px)`;
+                follower.style.transform = `translate(${followerX - 4}px, ${followerY - 4}px)`;
 
-            // Wave Text Effect
-            const heading = document.querySelector('h1');
-            heading.className = 'wave-text';
-            heading.innerHTML = heading.textContent.split('').map((char, i) => 
-                `<span style="--char-index: ${i}">${char}</span>`
-            ).join('');
+                requestAnimationFrame(animate);
+            };
 
-            // Loading Animation
-            const loading = document.createElement('div');
-            loading.className = 'loading';
-            loading.innerHTML = '<div class="loading-spinner"></div>';
-            document.body.appendChild(loading);
-        });
-
-        // Add animation delay to profile text paragraphs
-        document.querySelectorAll('.profile-text p').forEach((p, i) => {
-            p.style.setProperty('--index', i);
-        });
+            animate();
+        })();
     </script>
 </body>
 </html>
